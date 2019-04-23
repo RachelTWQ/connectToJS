@@ -34,6 +34,6 @@ findPeople(function(output) {
 
     output.forEach ((element, index) => {
         console.log(`- ${index + 1}: ${element['first_name']} ${element['last_name']}, born '${element['birthdate'].getFullYear()}-${element['birthdate'].getMonth() + 1}-${element['birthdate'].getDate()}'`);
-    })
+    });
 });
 
