@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/RachelTWQ/connectToJS#readme",
   "dependencies": {
+    "knex": "^0.16.5",
     "pg": "^7.10.0"
   }
 }
