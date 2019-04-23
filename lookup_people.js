@@ -10,12 +10,11 @@ const client = new pg.Client({
     ssl: settings.ssl
 });
 
-
 let inputName = process.argv[2];
 
 console.log("Searching ...");
 
-function foundPeople(callback) {
+function findPeople(callback) {
     client.connect((err) => {
         if (err) {
             return console.error("Connection Error", err);
@@ -30,6 +29,11 @@ function foundPeople(callback) {
     });
 }
 
-foundPeople(function(output) {
-    console.log(output);
+findPeople(function(output) {
+    console.log(`Found ${output.length} person(s) by the name '${inputName}':`);
+
+    output.forEach ((element, index) => {
+        console.log(`- ${index + 1}: ${element['first_name']} ${element['last_name']}, born '${element['birthdate'].getFullYear()}-${element['birthdate'].getMonth() + 1}-${element['birthdate'].getDate()}'`);
+    })
 });
+
