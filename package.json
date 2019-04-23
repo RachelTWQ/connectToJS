@@ -1,0 +1,25 @@
+{
+  "name": "connecttojs",
+  "version": "1.0.0",
+  "description": "w4d2 exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RachelTWQ/connectToJS.git"
+  },
+  "keywords": [
+    "javascripts"
+  ],
+  "author": "RachelTWQ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RachelTWQ/connectToJS/issues"
+  },
+  "homepage": "https://github.com/RachelTWQ/connectToJS#readme",
+  "dependencies": {
+    "pg": "^7.10.0"
+  }
+}
