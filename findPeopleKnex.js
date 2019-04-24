@@ -21,8 +21,10 @@ function findPeople (callback) {
 .asCallback((err, result) => {
     if (err) {
         return console.error("error running query", err);
+    } else {
+        callback(result);
     }
-    callback(result); 
+     
     knex.destroy();
 }); 
 }
